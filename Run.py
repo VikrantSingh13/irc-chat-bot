@@ -9,7 +9,7 @@ join_room(s)
 #main loop
 while(True):
   read_buffer = s.recv(1024).decode('UTF-8')
-  print(read_buffer)
+  #print(read_buffer)
 
   #ping pong 
   if (read_buffer.strip(" \n\r") == "PING :tmi.twitch.tv"):
@@ -19,6 +19,7 @@ while(True):
   #get user and message
   reply_to_user = get_user(read_buffer)
   reply_to_message = get_message(read_buffer).lower()
+  print(reply_to_user + "said : " + reply_to_message)
 
   #anti-ban random int
   random_int = random.randrange(0,1000000) if config.ANTI_BAN_RANDOM_INT else ""
