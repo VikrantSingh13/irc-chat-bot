@@ -9,6 +9,10 @@ join_room(s)
 #main loop
 while(True):
   read_buffer = s.recv(1024).decode('UTF-8')
+  print(read_buffer)
+  if (read_buffer.strip(" \n\r") == "PING :tmi.twitch.tv"):
+    send_message(s, "PONG :tmi.twitch.tv")
+    continue
   reply_to_user = get_user(read_buffer)
   reply_to_message = get_message(read_buffer).lower()
   
