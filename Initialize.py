@@ -28,3 +28,4 @@ def get_message(str):
   begin = str[1:].index(":") + 2
   return str[begin:].strip(" \n\r")
 		
+#todo add try catch to get_user and get_message

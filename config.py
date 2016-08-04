@@ -8,12 +8,12 @@ USER = "" #your or your bot's twitch username
 
 ### Spam related constants ===================================
 
-### Change TARGET_KEYWORD to "False", without the quotes, if you don't want to
+### Change TARGET_KEYWORD to [], if you don't want to
 ### reply to a specific keyword, and just want to spam links, etc. 
-TARGET_KEYWORD = "hello"
+TARGET_KEYWORD = ["hello", "Kappa"]
 
 ### TARGET_USER only takes "True" or "False" without the quotes
 TARGET_USER = True
 
-SPAM_MESSAGE = "hello"
+SPAM_MESSAGE = "Hello! Kappa"
 DELAY_BETWEEN_SPAM = 5 #SECONDS, set it to 0 at your own risk.
