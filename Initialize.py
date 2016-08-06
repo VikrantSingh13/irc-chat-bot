@@ -1,4 +1,5 @@
 from Socket import send_message
+from config import INITIALIZATION_SPAM
 import time
 
 def join_room(s):
@@ -11,7 +12,7 @@ def join_room(s):
     for line in temp:
       #print(line) #don't uncomment this line if there's too much spam in the chat
       loading = loading_complete(line)
-  send_message(s, "Hello Everyone!")
+  send_message(s, INITIALIZATION_SPAM)
 	
 def loading_complete(line):
   if("End of /NAMES list" in line):
